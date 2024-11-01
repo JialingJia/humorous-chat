@@ -6,11 +6,20 @@ from prompt import generate_response, generate_additional_response
 
 st.set_page_config(
     page_title='Humorous Response to Misinfo',
-    page_icon='😀',
+    page_icon='🤪',
     layout='wide'
 )
 
-# isd
+st.markdown(
+    """
+    <style>
+        section[data-testid="stSidebar"] {
+            width: 200px !important; # Set the width to your desired value
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 if 'clicked' not in st.session_state:
     st.session_state.clicked = False
